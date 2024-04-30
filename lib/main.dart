@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 
+import 'app/core/bindings/initial_bindings.dart';
 import 'app/routes/app_pages.dart';
 import 'firebase_options.dart';
 
@@ -18,6 +19,7 @@ void main() async {
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
+      initialBinding: InitialBindings(),
     ),
   );
 }

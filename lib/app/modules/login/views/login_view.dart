@@ -7,7 +7,7 @@ import '../../../core/values/images.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
-  const LoginView({Key? key}) : super(key: key);
+  const LoginView({super.key});
   @override
   Widget build(BuildContext context) {
     return blankLayout(
@@ -23,7 +23,7 @@ class LoginView extends GetView<LoginController> {
               textAlign: TextAlign.center,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: controller.login,
               child: SizedBox(
                 width: Get.width * 0.65,
                 child: const Text(

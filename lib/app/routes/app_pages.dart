@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:get/get.dart';
+import 'package:srp_drive/app/core/middlewares/auth_middleware.dart';
 
 import '../modules/home/index.dart';
 import '../modules/login/index.dart';
@@ -22,6 +23,7 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => const LoginView(),
       binding: LoginBinding(),
+      middlewares: [AuthMiddleware(priority: 0)],
     ),
   ];
 }
